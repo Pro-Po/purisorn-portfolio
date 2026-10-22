@@ -1,0 +1,84 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Fastwork Google Ads restructuring and growth results</title>
+  <desc id="desc">The Google Ads account changed from one broad ad group into category and intent-based groups with SKAGs and cost-to-GMV tracking. CAC fell from 1,200 baht to 900 baht, inquiries increased 15 percent, and GMV increased 20 percent.</desc>
+
+  <rect width="1200" height="720" rx="28" fill="#F9F8F6"/>
+
+  <text x="64" y="70" fill="#1A1A1A" font-family="DM Serif Display, Georgia, serif" font-size="36">Restructure the account. Reveal the economics.</text>
+  <text x="64" y="106" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="17">Google Ads architecture across 40–50 service categories</text>
+
+  <!-- Before -->
+  <rect x="64" y="150" width="324" height="224" rx="18" fill="#FFFFFF" stroke="#E4E0D8" stroke-width="2"/>
+  <circle cx="96" cy="184" r="9" fill="#C0392B"/>
+  <text x="118" y="191" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="19" font-weight="700">Before</text>
+  <text x="96" y="236" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="16">1 campaign</text>
+  <path d="M96 254H356" stroke="#E4E0D8" stroke-width="2"/>
+  <rect x="96" y="274" width="260" height="62" rx="12" fill="#FDF0EE"/>
+  <text x="116" y="300" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="600">1 broad ad group</text>
+  <text x="116" y="323" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="14">20–30 mixed-intent keywords</text>
+  <text x="96" y="358" fill="#C0392B" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600">Category economics were hidden</text>
+
+  <!-- Arrow -->
+  <path d="M416 262H474" stroke="#00917C" stroke-width="3" stroke-linecap="round"/>
+  <path d="M462 250L476 262L462 274" stroke="#00917C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="446" y="239" text-anchor="middle" fill="#00917C" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="700">RESTRUCTURE</text>
+
+  <!-- After -->
+  <rect x="504" y="150" width="632" height="224" rx="18" fill="#FFFFFF" stroke="#A3DDD5" stroke-width="2"/>
+  <circle cx="536" cy="184" r="9" fill="#00917C"/>
+  <text x="558" y="191" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="19" font-weight="700">After</text>
+
+  <rect x="536" y="220" width="168" height="66" rx="12" fill="#E6F5F2"/>
+  <text x="552" y="246" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="15" font-weight="700">Category groups</text>
+  <text x="552" y="269" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="13">Clear ownership</text>
+
+  <rect x="720" y="220" width="168" height="66" rx="12" fill="#E6F5F2"/>
+  <text x="736" y="246" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="15" font-weight="700">Intent groups</text>
+  <text x="736" y="269" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="13">Higher relevance</text>
+
+  <rect x="904" y="220" width="200" height="66" rx="12" fill="#E6F5F2"/>
+  <text x="920" y="246" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="15" font-weight="700">Selective SKAGs</text>
+  <text x="920" y="269" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="13">High-converting terms</text>
+
+  <path d="M620 304V324H1004V304" stroke="#A3DDD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="716" y="314" width="192" height="42" rx="21" fill="#00917C"/>
+  <text x="812" y="341" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="700">CAC + cost / GMV</text>
+
+  <!-- Results area -->
+  <text x="64" y="438" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="20" font-weight="700">Commercial impact</text>
+
+  <!-- CAC comparison -->
+  <rect x="64" y="472" width="560" height="184" rx="18" fill="#FFFFFF" stroke="#E4E0D8" stroke-width="2"/>
+  <text x="94" y="507" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="14">Customer acquisition cost</text>
+
+  <text x="94" y="550" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="14">Before</text>
+  <rect x="166" y="532" width="360" height="24" rx="12" fill="#FDF0EE"/>
+  <rect x="166" y="532" width="360" height="24" rx="12" fill="#C0392B"/>
+  <text x="542" y="550" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="15" font-weight="700">฿1,200</text>
+
+  <text x="94" y="594" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="14">After</text>
+  <rect x="166" y="576" width="360" height="24" rx="12" fill="#E6F5F2"/>
+  <rect x="166" y="576" width="270" height="24" rx="12" fill="#00917C"/>
+  <text x="452" y="594" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="15" font-weight="700">฿900</text>
+
+  <line x1="376" y1="522" x2="376" y2="612" stroke="#888888" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="376" y="633" text-anchor="middle" fill="#666666" font-family="DM Sans, Arial, sans-serif" font-size="12">฿700 target</text>
+  <rect x="482" y="612" width="104" height="26" rx="13" fill="#E6F5F2"/>
+  <text x="534" y="630" text-anchor="middle" fill="#007B69" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="700">25% lower</text>
+
+  <!-- Inquiry result -->
+  <rect x="648" y="472" width="224" height="184" rx="18" fill="#FFFFFF" stroke="#A3DDD5" stroke-width="2"/>
+  <path d="M682 594L720 556L750 574L818 510" stroke="#00917C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="818" cy="510" r="6" fill="#00917C"/>
+  <text x="676" y="520" fill="#00917C" font-family="DM Serif Display, Georgia, serif" font-size="44">+15%</text>
+  <text x="676" y="626" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="17" font-weight="700">Inquiries</text>
+
+  <!-- GMV result -->
+  <rect x="896" y="472" width="240" height="184" rx="18" fill="#00917C"/>
+  <path d="M930 594L968 566L1002 572L1084 510" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <circle cx="1084" cy="510" r="6" fill="#FFFFFF"/>
+  <text x="924" y="520" fill="#FFFFFF" font-family="DM Serif Display, Georgia, serif" font-size="44">+20%</text>
+  <text x="924" y="626" fill="#FFFFFF" font-family="DM Sans, Arial, sans-serif" font-size="17" font-weight="700">GMV</text>
+
+  <text x="64" y="692" fill="#888888" font-family="DM Sans, Arial, sans-serif" font-size="13">Fastwork Thailand · Google Ads performance marketing</text>
+</svg>

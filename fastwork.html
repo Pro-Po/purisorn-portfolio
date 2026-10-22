@@ -46,6 +46,24 @@
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
     @media(max-width:560px){ .two-col { grid-template-columns: 1fr; } }
 
+    .initiative-card {
+      display: block; margin-bottom: 48px; padding: 30px 32px;
+      background: var(--white); border: 1px solid #a3ddd5; border-radius: 14px;
+      color: var(--ink); text-decoration: none; transition: border-color 0.18s, transform 0.18s;
+    }
+    .initiative-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .initiative-card:focus-visible { outline: 3px solid rgba(0,145,124,0.24); outline-offset: 4px; }
+    .initiative-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .initiative-label { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+    .initiative-link { color: var(--accent); font-size: 13px; font-weight: 700; }
+    .initiative-card h2 { max-width: 540px; margin-bottom: 10px; font-family: 'DM Serif Display', serif; font-size: clamp(24px, 4vw, 34px); font-weight: 400; line-height: 1.15; }
+    .initiative-card > p { max-width: 650px; margin-bottom: 22px; color: var(--ink-light); line-height: 1.7; }
+    .initiative-results { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); }
+    .initiative-results div { padding: 18px 16px 0 0; }
+    .initiative-results div + div { padding-left: 16px; border-left: 1px solid var(--border); }
+    .initiative-results strong { display: block; color: var(--accent); font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; line-height: 1; }
+    .initiative-results span { color: var(--ink-light); font-size: 11px; }
+
     .block { margin-bottom: 48px; }
     .block-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
     .block h2 { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 3vw, 30px); font-weight: 400; letter-spacing: -0.3px; margin-bottom: 14px; line-height: 1.2; }
@@ -75,6 +93,11 @@
       .content { padding: 40px 20px; }
       h1 { font-size: 30px; letter-spacing: -0.5px; }
       .two-col { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .initiative-card { padding: 22px 20px; }
+      .initiative-top { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .initiative-results { grid-template-columns: 1fr; }
+      .initiative-results div { padding: 14px 0; }
+      .initiative-results div + div { padding-left: 0; border-top: 1px solid var(--border); border-left: 0; }
       .img-block { margin-bottom: 32px; }
       .learned, .outcome-box { padding: 20px; }
       .nav-cs { flex-direction: column; gap: 16px; }
@@ -222,6 +245,20 @@
       <p>Marketing manager responsible for Thailand growth and a pioneer team member for the Indonesia expansion. I owned GTM strategy, funnel optimization, and the go-to-market plan for getting to the first 1,000 customers in Indonesia within 90 days.</p>
     </div>
   </div>
+
+  <a class="initiative-card" href="fastwork-performance.html">
+    <div class="initiative-top">
+      <span class="initiative-label">Selected initiative · Performance marketing</span>
+      <span class="initiative-link">View detailed case →</span>
+    </div>
+    <h2>Restructuring Google Ads to improve marketplace growth</h2>
+    <p>Rebuilt acquisition across 40–50 service categories and connected campaign decisions to category-level CAC and cost-to-GMV performance.</p>
+    <div class="initiative-results" aria-label="Performance marketing results">
+      <div><strong>−25%</strong><span>CAC</span></div>
+      <div><strong>+15%</strong><span>Inquiries</span></div>
+      <div><strong>+20%</strong><span>GMV</span></div>
+    </div>
+  </a>
 
   <div style="border-top:1px solid var(--border); margin: 40px 0"></div>
 
