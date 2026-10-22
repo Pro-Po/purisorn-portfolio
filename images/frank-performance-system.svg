@@ -1,0 +1,81 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Frank motor insurance growth and Google Ads automation system</title>
+  <desc id="desc">A comparison showing monthly spend rising from 500 thousand baht to one million baht, leads rising from 3,000 to 7,000, and cost per lead falling from 167 baht to 143 baht, followed by a workflow from performance data through Google Sheets and Google Ads Scripts to automated device and schedule bid adjustments.</desc>
+
+  <rect width="1200" height="760" rx="24" fill="#FCFBF9"/>
+  <text x="60" y="66" fill="#1A1A1A" font-family="DM Serif Display, Georgia, serif" font-size="38">Scale the account. Improve the economics.</text>
+  <text x="60" y="98" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="16">Motor insurance lead generation across a 14-month engagement</text>
+
+  <rect x="60" y="138" width="1080" height="250" rx="18" fill="white" stroke="#DDD9D0" stroke-width="2"/>
+  <text x="94" y="180" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="18" font-weight="700">Scaling performance</text>
+
+  <text x="94" y="230" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">MONTHLY SPEND</text>
+  <text x="330" y="230" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">LEADS</text>
+  <text x="566" y="230" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">COST PER LEAD</text>
+
+  <rect x="94" y="254" width="192" height="98" rx="12" fill="#F5F3EF"/>
+  <text x="114" y="283" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="13">Before</text>
+  <text x="114" y="327" fill="#1A1A1A" font-family="DM Serif Display, Georgia, serif" font-size="35">฿500K</text>
+
+  <rect x="330" y="254" width="192" height="98" rx="12" fill="#F5F3EF"/>
+  <text x="350" y="283" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="13">Before</text>
+  <text x="350" y="327" fill="#1A1A1A" font-family="DM Serif Display, Georgia, serif" font-size="35">3,000</text>
+
+  <rect x="566" y="254" width="192" height="98" rx="12" fill="#F5F3EF"/>
+  <text x="586" y="283" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="13">Before</text>
+  <text x="586" y="327" fill="#1A1A1A" font-family="DM Serif Display, Georgia, serif" font-size="35">฿167</text>
+
+  <path d="M785 303H820" stroke="#B64235" stroke-width="3" stroke-linecap="round"/>
+  <path d="M813 294L822 303L813 312" stroke="#B64235" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="850" y="216" width="256" height="136" rx="14" fill="#B64235"/>
+  <text x="874" y="247" fill="#F7DCD6" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="700">AFTER 14 MONTHS</text>
+  <text x="874" y="286" fill="white" font-family="DM Serif Display, Georgia, serif" font-size="34">฿1M → 7,000</text>
+  <text x="874" y="306" fill="#F7DCD6" font-family="DM Sans, Arial, sans-serif" font-size="12">monthly spend · leads</text>
+  <rect x="874" y="316" width="104" height="24" rx="12" fill="#F7E7E3"/>
+  <text x="926" y="333" text-anchor="middle" fill="#8E2D23" font-family="DM Sans, Arial, sans-serif" font-size="12" font-weight="700">CPL −14%</text>
+  <rect x="986" y="316" width="96" height="24" rx="12" fill="white" fill-opacity="0.16"/>
+  <text x="1034" y="333" text-anchor="middle" fill="white" font-family="DM Sans, Arial, sans-serif" font-size="12" font-weight="700">Leads 2.3×</text>
+
+  <text x="60" y="445" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="18" font-weight="700">Bid automation workflow</text>
+  <text x="60" y="472" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Turn conversion evidence into repeatable campaign-level action</text>
+
+  <rect x="60" y="510" width="212" height="142" rx="16" fill="white" stroke="#DDD9D0" stroke-width="2"/>
+  <circle cx="94" cy="544" r="12" fill="#B64235"/>
+  <text x="118" y="550" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="700">Performance data</text>
+  <text x="84" y="586" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Clicks · leads · conversions</text>
+  <text x="84" y="612" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Device · hour · day</text>
+
+  <path d="M284 581H322" stroke="#B64235" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M315 573L324 581L315 589" stroke="#B64235" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="336" y="510" width="212" height="142" rx="16" fill="#F7E7E3" stroke="#EAC0B8" stroke-width="2"/>
+  <circle cx="370" cy="544" r="12" fill="#B64235"/>
+  <text x="394" y="550" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="700">Google Sheets</text>
+  <text x="360" y="586" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Calculate bid percentages</text>
+  <text x="360" y="612" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Review and control logic</text>
+
+  <path d="M560 581H598" stroke="#B64235" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M591 573L600 581L591 589" stroke="#B64235" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="612" y="510" width="212" height="142" rx="16" fill="white" stroke="#DDD9D0" stroke-width="2"/>
+  <circle cx="646" cy="544" r="12" fill="#B64235"/>
+  <text x="670" y="550" fill="#1A1A1A" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="700">Google Ads Script</text>
+  <text x="636" y="586" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Read approved adjustments</text>
+  <text x="636" y="612" fill="#66645F" font-family="DM Sans, Arial, sans-serif" font-size="14">Push changes automatically</text>
+
+  <path d="M836 581H874" stroke="#B64235" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M867 573L876 581L867 589" stroke="#B64235" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="888" y="510" width="252" height="142" rx="16" fill="#1A1A1A"/>
+  <text x="914" y="550" fill="white" font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="700">Automated adjustments</text>
+  <rect x="914" y="574" width="86" height="31" rx="15.5" fill="#B64235"/>
+  <text x="957" y="595" text-anchor="middle" fill="white" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="700">Device</text>
+  <rect x="1008" y="574" width="104" height="31" rx="15.5" fill="#353535"/>
+  <text x="1060" y="595" text-anchor="middle" fill="white" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="700">Schedule</text>
+  <text x="914" y="628" fill="#C8C5C0" font-family="DM Sans, Arial, sans-serif" font-size="13">Campaign-level bid control</text>
+
+  <path d="M1014 666C1014 706 164 706 164 666" stroke="#B64235" stroke-width="2" stroke-dasharray="7 7"/>
+  <path d="M154 672L164 662L174 672" stroke="#B64235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="589" y="728" text-anchor="middle" fill="#8E2D23" font-family="DM Sans, Arial, sans-serif" font-size="13" font-weight="700">MEASURE → ADJUST → LEARN → REPEAT</text>
+</svg>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frank motor insurance performance marketing case study by Purisorn Indradat.">
+  <title>Frank Performance Marketing — Purisorn Indradat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      --paper: #f5f3ef;
+      --paper-deep: #ece9e2;
+      --white: #fff;
+      --ink: #1a1a1a;
+      --muted: #66645f;
+      --line: #ddd9d0;
+      --signal: #b64235;
+      --signal-dark: #8e2d23;
+      --signal-pale: #f7e7e3;
+      --max: 1080px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    img { max-width: 100%; }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(221, 217, 208, 0.9);
+      background: rgba(245, 243, 239, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      width: min(calc(100% - 48px), var(--max));
+      height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "DM Serif Display", serif;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .back-link:focus-visible { color: var(--signal); }
+
+    .back-link:focus-visible {
+      outline: 3px solid rgba(182, 66, 53, 0.22);
+      outline-offset: 5px;
+    }
+
+    main { overflow: hidden; }
+
+    .hero {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+      padding: 92px 0 50px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(250px, 0.45fr);
+      gap: 70px;
+      align-items: end;
+    }
+
+    .context,
+    .story-label {
+      color: var(--signal);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .context { margin: 0 0 22px; }
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 800px;
+      margin-bottom: 26px;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(46px, 7vw, 78px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+    }
+
+    .hero-summary {
+      max-width: 710px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 20px);
+      line-height: 1.6;
+    }
+
+    .scope-list {
+      margin: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .scope-list div {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scope-list dt {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .scope-list dd {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .impact-strip {
+      margin-top: 54px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .impact-item {
+      min-height: 128px;
+      padding: 24px 26px 24px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .impact-item + .impact-item {
+      padding-left: 26px;
+      border-left: 1px solid var(--line);
+    }
+
+    .impact-value {
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(33px, 4vw, 48px);
+      line-height: 1;
+    }
+
+    .impact-item:first-child .impact-value,
+    .impact-item:nth-child(2) .impact-value { color: var(--signal); }
+
+    .impact-label {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .section {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+      padding: 92px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .story-row {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 62px;
+    }
+
+    .story-label { margin: 3px 0 0; }
+
+    .story-copy h2,
+    .evidence-head h2 {
+      max-width: 750px;
+      margin-bottom: 25px;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(32px, 4.2vw, 48px);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+    }
+
+    .story-copy > p {
+      max-width: 720px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .story-copy strong { color: var(--ink); }
+
+    .method-list {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+    }
+
+    .method {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 28px;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .method-name {
+      color: var(--signal);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .method h3 {
+      margin-bottom: 6px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .method p {
+      max-width: 660px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .evidence {
+      background: var(--paper-deep);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .evidence-inner {
+      width: min(calc(100% - 48px), 1200px);
+      margin: 0 auto;
+      padding: 90px 0 84px;
+    }
+
+    .evidence-head {
+      width: min(100%, var(--max));
+      margin: 0 auto 36px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 50px;
+      align-items: end;
+    }
+
+    .evidence-head h2 { margin-bottom: 0; }
+
+    .evidence-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .evidence-figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+      box-shadow: 0 18px 45px rgba(47, 45, 39, 0.08);
+    }
+
+    .evidence-figure img {
+      width: 100%;
+      display: block;
+    }
+
+    .evidence-figure figcaption {
+      padding: 13px 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .result-line {
+      width: min(100%, var(--max));
+      margin: 46px auto 0;
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 62px;
+    }
+
+    .result-line p:last-child {
+      max-width: 750px;
+      margin: 0;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1.28;
+    }
+
+    .result-line span { color: var(--signal); }
+
+    .learning {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+      padding: 92px 0;
+    }
+
+    .learning-box {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 62px;
+      padding: 46px 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    blockquote {
+      max-width: 760px;
+      margin: 0;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(26px, 3.4vw, 40px);
+      line-height: 1.25;
+    }
+
+    .learning-note {
+      max-width: 700px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .recognition {
+      max-width: 700px;
+      margin-top: 22px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--signal);
+      background: var(--signal-pale);
+      color: var(--signal-dark);
+      font-size: 13px;
+    }
+
+    .case-footer {
+      min-height: 170px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .case-footer p { margin: 0; color: rgba(255,255,255,0.68); font-size: 14px; }
+
+    @media (max-width: 820px) {
+      .hero { padding-top: 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .scope-list { max-width: 450px; }
+      .impact-strip { grid-template-columns: 1fr 1fr; }
+      .impact-item:nth-child(3) { border-left: 0; }
+      .impact-item:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .story-row,
+      .result-line,
+      .learning-box { grid-template-columns: 1fr; gap: 22px; }
+      .evidence-head { display: block; }
+      .evidence-head p { max-width: 570px; margin-top: 18px; }
+    }
+
+    @media (max-width: 560px) {
+      .nav-inner,
+      .hero,
+      .section,
+      .learning { width: min(calc(100% - 36px), var(--max)); }
+      .evidence-inner { width: min(calc(100% - 20px), 1200px); }
+      .hero { padding: 48px 0 38px; }
+      h1 { font-size: 42px; }
+      .hero-summary { font-size: 17px; }
+      .impact-strip { margin-top: 38px; }
+      .impact-item { min-height: 112px; padding: 20px 18px 20px 0; }
+      .impact-item + .impact-item { padding-left: 18px; }
+      .section { padding: 66px 0; }
+      .story-copy > p { font-size: 16px; }
+      .method { grid-template-columns: 1fr; gap: 7px; padding: 22px 0; }
+      .evidence-inner { padding: 66px 0 58px; }
+      .evidence-head,
+      .result-line { padding: 0 8px; }
+      .evidence-figure { overflow-x: auto; border-radius: 8px; }
+      .evidence-figure img { min-width: 760px; }
+      .learning { padding: 66px 0; }
+      .learning-box { padding: 34px 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">Purisorn.</a>
+      <a class="back-link" href="index.html#work">← Back to selected work</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <p class="context">Frank · Motor insurance · Performance marketing</p>
+          <h1>Scaling motor insurance leads 2.3× while reducing CPL by 14%.</h1>
+          <p class="hero-summary">I scaled Google Ads from ฿500K to ฿1M per month while leads grew from 3,000 to 7,000—combining search relevance, landing-page optimization, measurement, and automated bidding.</p>
+        </div>
+
+        <dl class="scope-list">
+          <div><dt>Client</dt><dd>Frank</dd></div>
+          <div><dt>Focus</dt><dd>Motor insurance leads</dd></div>
+          <div><dt>Channel</dt><dd>Google Ads</dd></div>
+          <div><dt>Budget</dt><dd>฿500K → ฿1M/month</dd></div>
+          <div><dt>Period</dt><dd>14 months</dd></div>
+        </dl>
+      </div>
+
+      <div class="impact-strip" aria-label="Case study outcomes">
+        <div class="impact-item">
+          <span class="impact-value">2.3×</span>
+          <p class="impact-label">Leads, from 3,000 to 7,000</p>
+        </div>
+        <div class="impact-item">
+          <span class="impact-value">−14%</span>
+          <p class="impact-label">Estimated cost per lead</p>
+        </div>
+        <div class="impact-item">
+          <span class="impact-value">฿1M</span>
+          <p class="impact-label">Monthly Google Ads spend at scale</p>
+        </div>
+        <div class="impact-item">
+          <span class="impact-value">14</span>
+          <p class="impact-label">Months of sustained optimization</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="story-row">
+        <p class="story-label">The challenge</p>
+        <div class="story-copy">
+          <h2>Doubling the budget only mattered if leads grew faster than spend.</h2>
+          <p>The account started at approximately ฿500K per month and generated around 3,000 motor-insurance leads. Scaling required more than expanding bids: high-converting keywords needed stronger relevance, landing pages needed a better experience, and campaign decisions needed reliable conversion evidence.</p>
+          <p>The commercial goal was clear: <strong>increase lead volume while protecting—and improving—cost efficiency.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="story-row">
+        <p class="story-label">The growth system</p>
+        <div class="story-copy">
+          <h2>I treated ads, landing pages, measurement, and bidding as one connected system.</h2>
+
+          <div class="method-list">
+            <article class="method">
+              <p class="method-name">Search relevance</p>
+              <div>
+                <h3>Used Quality Score to diagnose friction</h3>
+                <p>Focused on high-converting keywords and improved the connection between search intent, ad messaging, expected CTR, and landing-page relevance.</p>
+              </div>
+            </article>
+
+            <article class="method">
+              <p class="method-name">Landing experience</p>
+              <div>
+                <h3>Worked beyond the media account</h3>
+                <p>Partnered with product and website teams to create and optimize campaign-specific landing pages that supported both conversion and landing-page experience.</p>
+              </div>
+            </article>
+
+            <article class="method">
+              <p class="method-name">Measurement</p>
+              <div>
+                <h3>Connected traffic to lead outcomes</h3>
+                <p>Implemented conversion tracking and extensive Google Analytics analysis to monitor traffic quality, leads, conversion rates, and performance growth.</p>
+              </div>
+            </article>
+
+            <article class="method">
+              <p class="method-name">Automation</p>
+              <div>
+                <h3>Turned performance patterns into bid actions</h3>
+                <p>Built a Google Ads Script that pulled adjustment percentages from Google Sheets and automatically updated device and campaign-schedule bids.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence" aria-labelledby="evidence-title">
+      <div class="evidence-inner">
+        <div class="evidence-head">
+          <h2 id="evidence-title">The account scaled because optimization became systematic.</h2>
+          <p>The workflow combined human control in Google Sheets with repeatable deployment through Google Ads Scripts.</p>
+        </div>
+
+        <figure class="evidence-figure">
+          <img src="images/frank-performance-system.svg" alt="Frank campaign scaling results and automated Google Ads bidding workflow.">
+          <figcaption>Performance scaling and campaign-level bid automation</figcaption>
+        </figure>
+
+        <div class="result-line">
+          <p class="story-label">The result</p>
+          <p>Spend increased <span>100%</span>, leads increased <span>133%</span>, and estimated CPL improved from ฿167 to ฿143.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="learning">
+      <div class="learning-box">
+        <p class="story-label">What I learned</p>
+        <div>
+          <blockquote>Paid-search efficiency improves when media, product experience, measurement, and automation reinforce each other.</blockquote>
+          <p class="learning-note">The strongest gains did not come from one bidding tactic. They came from improving the complete path—from the search query and ad, through the landing page, to conversion evidence and repeatable bid adjustments.</p>
+          <p class="recognition"><strong>Recognition:</strong> The bid-automation work was showcased as part of Google Blue Belt certification.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="case-footer">
+    <p>Frank motor insurance · Performance marketing</p>
+  </footer>
+</body>
+</html>
