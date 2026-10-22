@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G-ABLE — Purisorn Indradat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #ffffff; --bg: #f5f3ef; --ink: #1a1a1a; --ink-light: #666;
+      --border: #e4e0d8; --accent: #6d28d9; --accent-light: #f3eeff;
+      --max: 780px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.65; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245,243,239,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); padding: 0 40px;
+    }
+    nav .wrap { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 58px; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .nav-back { font-size: 14px; color: var(--ink-light); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.15s; }
+    .nav-back:hover { color: var(--ink); }
+
+    .hero { padding: 64px 40px 48px; border-bottom: 1px solid var(--border); }
+    .hero-inner { max-width: var(--max); margin: 0 auto; }
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .chip { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; padding: 4px 12px; border-radius: 99px; background: var(--accent-light); color: var(--accent); }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 400; letter-spacing: -1px; line-height: 1.1; color: var(--ink); margin-bottom: 16px; }
+    .hero-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .hero-company { font-size: 13px; color: var(--ink-light); }
+    .hero-stat { font-size: 13px; font-weight: 700; color: var(--accent); }
+
+    .content { max-width: var(--max); margin: 0 auto; padding: 56px 40px; }
+
+    .img-block { width: 100%; border-radius: 14px; overflow: hidden; background: var(--white); border: 1px solid var(--border); margin-bottom: 48px; }
+    .img-block img { width: 100%; display: block; }
+    .img-placeholder { width: 100%; aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ink-light); gap: 8px; font-size: 14px; padding: 40px; }
+    .img-placeholder .icon { font-size: 36px; opacity: 0.25; }
+    .img-caption { font-size: 11px; color: var(--ink-light); text-align: center; padding: 10px 20px; border-top: 1px solid var(--border); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
+    @media(max-width:560px){ .two-col { grid-template-columns: 1fr; } }
+
+    .block { margin-bottom: 48px; }
+    .block-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .block h2 { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 3vw, 30px); font-weight: 400; letter-spacing: -0.3px; margin-bottom: 14px; line-height: 1.2; }
+    .block p { color: var(--ink-light); line-height: 1.8; margin-bottom: 12px; }
+    .block p:last-child { margin-bottom: 0; }
+    .block p strong { color: var(--ink); }
+
+    ul.did { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    ul.did li { font-size: 15px; color: var(--ink); padding-left: 22px; position: relative; line-height: 1.65; }
+    ul.did li::before { content: '—'; position: absolute; left: 0; color: var(--ink-light); }
+
+    .outcome-box { background: var(--accent-light); border: 1px solid #c4b0f5; border-radius: 14px; padding: 28px 32px; margin-bottom: 48px; }
+    .outcome-box .block-label { color: var(--accent); }
+    .outcome-box p { font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.6; }
+
+    .learned { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; margin-bottom: 48px; }
+    .learned .block-label { color: var(--ink-light); }
+
+    .nav-cs { display: flex; justify-content: space-between; padding-top: 48px; border-top: 1px solid var(--border); }
+    .nav-cs a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 6px; border-bottom: 1.5px solid var(--ink); padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
+    .nav-cs a:hover { color: var(--accent); border-color: var(--accent); }
+
+    footer { text-align: center; padding: 24px; font-size: 13px; color: var(--ink-light); border-top: 1px solid var(--border); }
+    @media(max-width:480px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 48px 20px 36px; }
+      .content { padding: 40px 20px; }
+      h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .two-col { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .img-block { margin-bottom: 32px; }
+      .learned, .outcome-box { padding: 20px; }
+      .nav-cs { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap" style="padding:0">
+    <a href="index.html" class="nav-logo">Purisorn.</a>
+    <a href="index.html" class="nav-back">← Back to work</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="chips">
+      <span class="chip">Team Building</span>
+      <span class="chip">GTM</span>
+      <span class="chip">B2B</span>
+      <span class="chip">Enterprise</span>
+    </div>
+    <h1>Building a Digital Team<br>Inside a Legacy Company</h1>
+    <div class="hero-meta">
+      <span class="hero-company">G-ABLE Group · May 2017 – Jun 2018</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+
+  <div class="two-col">
+    <div class="block" style="margin-bottom:0">
+      <div class="block-label">The Company</div>
+      <p>G-ABLE Group is a 20+ year system integrator in Thailand — a well-established B2B technology company with deep enterprise relationships but no digital marketing capability whatsoever.</p>
+      <p>The mandate was clear: <strong>build a digital marketing function from scratch</strong> and prove it could generate real business results for a company that had never done it before.</p>
+    </div>
+    <div class="block" style="margin-bottom:0">
+      <div class="block-label">My Role</div>
+      <p>Digital Marketing Manager — first person in this function at the company. I built the team, defined the process, rebuilt the website positioning, and ran GTM campaigns that closed new enterprise clients.</p>
+      <p>I worked with support from my supervisor and team to close key accounts, including a one-year contract with a major Thai real-estate developer.</p>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--border); margin: 40px 0"></div>
+
+  <div class="block">
+    <div class="block-label">The Problem</div>
+    <h2>A company that didn't understand digital — and pushed back at every step.</h2>
+    <p>G-ABLE had a hard-coded website, no CMS, and no marketing function. Leadership didn't understand what digital marketing could do for a B2B business, which meant every decision — from switching to a CMS to defining a new positioning — required building the business case from scratch.</p>
+    <p>The internal friction was real: <strong>pushback on technology choices, skepticism about digital's ROI, and a culture built around traditional enterprise sales.</strong> The job wasn't just to run campaigns — it was to change how the company thought about digital entirely.</p>
+  </div>
+
+  <div class="block">
+    <div class="block-label">What I Did</div>
+    <h2>Build the case. Build the team. Build the pipeline.</h2>
+    <ul class="did">
+      <li>Built the digital marketing team from zero — defined roles, SLAs, rate cards, and performance standards across SEM, SEO, GDN, Facebook, and email</li>
+      <li>Made the case for migrating from a hard-coded website to a CMS — navigated internal resistance and drove the migration through to completion</li>
+      <li>Rebuilt the website positioning to speak to B2B enterprise buyers instead of technical audiences, reframing G-ABLE's value proposition around business outcomes</li>
+      <li>Established team playbooks aligned to Google and Facebook best practices, giving the team a repeatable operating model</li>
+      <li>Built a unified marketing data platform consolidating multi-channel performance into a single reporting view — reducing analytical overhead and improving decision speed</li>
+      <li>Led cross-functional GTM campaigns with management, engineering, and sales — resulting in a one-year performance marketing contract with a major Thai real-estate developer</li>
+    </ul>
+  </div>
+
+
+
+  <div class="learned">
+    <div class="block-label">What I Learned</div>
+    <p style="color:var(--ink-light); line-height:1.8">The hardest part of this role wasn't the marketing — it was <strong style="color:var(--ink)">earning trust inside a company that didn't believe in what you were building yet.</strong> I learned that in legacy organizations, you have to win internal stakeholders before you can win external ones. Data helps. Small wins help more. And being patient enough to bring people along — rather than forcing change — is what makes the work stick.</p>
+  </div>
+
+  <div class="nav-cs">
+    <a href="fastwork.html">← Fastwork</a>
+    <a href="index.html">Back to home →</a>
+  </div>
+
+</div>
+
+<footer>© 2026 Purisorn Indradat · Bangkok, Thailand</footer>
+
+</body>
+</html>

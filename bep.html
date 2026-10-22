@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEP Digital — Purisorn Indradat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #ffffff; --bg: #f5f3ef; --ink: #1a1a1a; --ink-light: #666;
+      --border: #e4e0d8; --accent: #c0392b; --accent-light: #fdf0ee;
+      --max: 780px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.65; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245,243,239,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); padding: 0 40px;
+    }
+    nav .wrap { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 58px; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); text-decoration: none; }
+    .nav-back { font-size: 14px; color: var(--ink-light); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.15s; }
+    .nav-back:hover { color: var(--ink); }
+
+    .hero { padding: 64px 40px 48px; border-bottom: 1px solid var(--border); }
+    .hero-inner { max-width: var(--max); margin: 0 auto; }
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .chip { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; padding: 4px 12px; border-radius: 99px; background: var(--accent-light); color: var(--accent); }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 400; letter-spacing: -1px; line-height: 1.1; color: var(--ink); margin-bottom: 16px; }
+    .hero-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .hero-company { font-size: 13px; color: var(--ink-light); }
+    .hero-stat { font-size: 13px; font-weight: 700; color: var(--accent); }
+
+    .content { max-width: var(--max); margin: 0 auto; padding: 56px 40px; }
+
+    .img-block {
+      width: 100%; border-radius: 14px; overflow: hidden;
+      background: var(--white); border: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+    .img-block img { width: 100%; display: block; }
+    .img-placeholder {
+      width: 100%; aspect-ratio: 16/9;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--ink-light); gap: 8px; font-size: 14px; padding: 40px;
+    }
+    .img-placeholder .icon { font-size: 36px; opacity: 0.25; }
+    .img-caption { font-size: 11px; color: var(--ink-light); text-align: center; padding: 10px 20px; border-top: 1px solid var(--border); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
+    @media(max-width:560px){ .two-col { grid-template-columns: 1fr; } }
+
+    .block { margin-bottom: 48px; }
+    .block-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .block h2 { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 3vw, 30px); font-weight: 400; letter-spacing: -0.3px; margin-bottom: 14px; line-height: 1.2; }
+    .block p { color: var(--ink-light); line-height: 1.8; margin-bottom: 12px; }
+    .block p:last-child { margin-bottom: 0; }
+    .block p strong { color: var(--ink); }
+
+    ul.did { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    ul.did li { font-size: 15px; color: var(--ink); padding-left: 22px; position: relative; line-height: 1.65; }
+    ul.did li::before { content: '—'; position: absolute; left: 0; color: var(--ink-light); }
+
+    .outcome-box {
+      background: var(--accent-light); border: 1px solid #f2c4bc;
+      border-radius: 14px; padding: 28px 32px; margin-bottom: 48px;
+    }
+    .outcome-box .block-label { color: var(--accent); }
+    .outcome-box p { font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.6; }
+
+    .learned { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; margin-bottom: 48px; }
+    .learned .block-label { color: var(--ink-light); }
+
+    .nav-cs { display: flex; justify-content: space-between; padding-top: 48px; border-top: 1px solid var(--border); }
+    .nav-cs a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 6px; border-bottom: 1.5px solid var(--ink); padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
+    .nav-cs a:hover { color: var(--accent); border-color: var(--accent); }
+
+    footer { text-align: center; padding: 24px; font-size: 13px; color: var(--ink-light); border-top: 1px solid var(--border); margin-top: 0; }
+    @media(max-width:480px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 48px 20px 36px; }
+      .content { padding: 40px 20px; }
+      h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .two-col { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .img-block { margin-bottom: 32px; }
+      .learned, .outcome-box { padding: 20px; }
+      .nav-cs { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap" style="padding:0">
+    <a href="/" class="nav-logo">Purisorn.</a>
+    <a href="index.html" class="nav-back">← Back to work</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="chips">
+      <span class="chip">0→1 GTM</span>
+      <span class="chip">Lead Generation</span>
+      <span class="chip">Product</span>
+      <span class="chip">SEO Growth</span>
+    </div>
+    <h1>Building a Lead Engine<br>from Scratch</h1>
+    <div class="hero-meta">
+      <span class="hero-company">BEP Digital Agency · 2020 – Present</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Screenshot of BEP site -->
+  <div class="img-block">
+    <img src="images/bep-homepage.png" alt="BEP Digital Agency website">
+    <div class="img-caption">BEP Digital Agency — bepgroup.space</div>
+  </div>
+
+  <!-- Product & My Role -->
+  <div class="two-col">
+    <div class="block" style="margin-bottom:0">
+      <div class="block-label">The Product</div>
+      <p>BEP Digital Agency launched in 2018 as a small digital marketing shop in Bangkok. When I joined in 2020, the company had no brand recognition, a single-page website, and a service offering too narrow to compete for meaningful clients.</p>
+      <p>The core challenge was a classic 0→1 problem: <strong>how do you build inbound demand for a company no one has heard of, with zero paid acquisition budget?</strong></p>
+    </div>
+    <div class="block" style="margin-bottom:0">
+      <div class="block-label">My Role</div>
+      <p>I joined as the first product & marketing hire. There was no existing process — no sales flow, no content strategy, no roadmap. I built it from the ground up while simultaneously running it.</p>
+      <p>I owned the full product lifecycle, the website roadmap, the content and SEO strategy, and the lead generation pipeline — all as a cross-functional lead.</p>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--border); margin: 40px 0"></div>
+
+  <!-- The Problem -->
+  <div class="block">
+    <div class="block-label">The Problem</div>
+    <h2>Leads came in. But they asked for things we couldn't deliver.</h2>
+    <p>Early on, we started getting inbound inquiries — but they were the wrong fit. Our messaging was too generic and attracted clients with scope requirements that our operations couldn't handle. The result was wasted sales conversations and a team stretched thin on mismatched work.</p>
+    <p>The root issue was twofold: <strong>our service scope was too narrow</strong> to compete for larger, better-fit clients, and our <strong>messaging wasn't filtering for the right ICP</strong>. We needed to solve both at the same time.</p>
+  </div>
+
+  <!-- What I Did -->
+  <div class="block">
+    <div class="block-label">What I Did</div>
+    <h2>Expand scope. Fix the message. Build the machine.</h2>
+    <ul class="did">
+      <li>Defined the ideal customer profile and rewrote service messaging to attract better-fit leads and filter out mismatches at the top of the funnel</li>
+      <li>Built strategic partnerships with complementary agencies to expand our service scope — allowing us to pitch and deliver on larger, more complex client needs</li>
+      <li>Scaled the website from 1 to 200+ pages through a structured SEO and content strategy, driving organic growth and brand discoverability without paid budget</li>
+      <li>Built self-serve tools including a cost calculator, 1-page SEO audit tool, and advertising mockup generator to reduce time-to-value for prospective clients and increase engagement</li>
+      <li>Set up the full sales pipeline — lead capture, CRM, nurture sequences, and conversion tracking — from zero</li>
+      <li>Continuously developed product and business strategy, identifying opportunities for product-market fit through customer feedback, A/B testing, and OKR-aligned releases</li>
+      <li>Deployed AI automation pipelines across the content and marketing workflow, saving 15 hours per week in production time</li>
+    </ul>
+  </div>
+
+  <!-- GROWTH ENGINE DIAGRAM -->
+  <div class="img-block" style="padding: 40px 32px 0; background: #faf9f7;">
+    <div style="text-align:center; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#999; margin-bottom:32px;">Organic Growth Engine — Content to Lead</div>
+
+    <svg viewBox="0 0 900 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+      <defs>
+        <marker id="arrc" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+          <path d="M 0 0 L 6 3.5 L 0 7 Z" fill="#c0392b" opacity="0.5"/>
+        </marker>
+        <marker id="arrc2" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+          <path d="M 0 0 L 6 3.5 L 0 7 Z" fill="#c0392b"/>
+        </marker>
+        <marker id="arrb" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+          <path d="M 0 0 L 6 3.5 L 0 7 Z" fill="#888"/>
+        </marker>
+      </defs>
+
+      <!-- ═══════════════════════════════
+           MAIN DIAGRAM (left, 0–630)
+      ═══════════════════════════════ -->
+
+      <!-- TOP ROW — 4 inputs evenly spaced in 630px -->
+      <!-- SEO Articles: center=78 -->
+      <rect x="12" y="20" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <rect x="12" y="20" width="132" height="4" rx="2" fill="#c0392b" opacity="0.6"/>
+      <text x="27" y="47" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#c0392b">✍️  SEO Articles</text>
+      <text x="27" y="62" font-family="DM Sans, sans-serif" font-size="9" fill="#888">200+ pages targeting</text>
+      <text x="27" y="75" font-family="DM Sans, sans-serif" font-size="9" fill="#888">business keywords</text>
+
+      <!-- Landing Pages: center=236 -->
+      <rect x="170" y="20" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <rect x="170" y="20" width="132" height="4" rx="2" fill="#c0392b" opacity="0.6"/>
+      <text x="185" y="47" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#c0392b">📄  Landing Pages</text>
+      <text x="185" y="62" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Service-specific pages</text>
+      <text x="185" y="75" font-family="DM Sans, sans-serif" font-size="9" fill="#888">with clear ICP messaging</text>
+
+      <!-- Free Tools: center=394 -->
+      <rect x="328" y="20" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <rect x="328" y="20" width="132" height="4" rx="2" fill="#c0392b" opacity="0.6"/>
+      <text x="343" y="47" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#c0392b">🛠  Free Tools</text>
+      <text x="343" y="62" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Cost calculator, SEO audit</text>
+      <text x="343" y="75" font-family="DM Sans, sans-serif" font-size="9" fill="#888">&amp; ad mockup generator</text>
+
+      <!-- Partnerships: center=552 -->
+      <rect x="486" y="20" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <rect x="486" y="20" width="132" height="4" rx="2" fill="#c0392b" opacity="0.6"/>
+      <text x="501" y="47" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#c0392b">🤝  Partnerships</text>
+      <text x="501" y="62" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Agency alliances to</text>
+      <text x="501" y="75" font-family="DM Sans, sans-serif" font-size="9" fill="#888">expand service scope</text>
+
+      <!-- HUB: x=165, w=300, center-x=315, top=148, bottom=224 -->
+      <!-- Arrows from each box bottom-center → hub top-center (315,148) -->
+      <line x1="78"  y1="92" x2="280" y2="148" stroke="#f2c4bc" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrc)"/>
+      <line x1="236" y1="92" x2="302" y2="148" stroke="#f2c4bc" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrc)"/>
+      <line x1="394" y1="92" x2="328" y2="148" stroke="#f2c4bc" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrc)"/>
+      <line x1="552" y1="92" x2="350" y2="148" stroke="#f2c4bc" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrc)"/>
+
+      <!-- HUB BOX -->
+      <rect x="165" y="148" width="300" height="76" rx="16" fill="#c0392b"/>
+      <rect x="173" y="156" width="284" height="60" rx="12" fill="white" opacity="0.07"/>
+      <text x="315" y="176" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="700" fill="white">BEP Website + CRM Pipeline</text>
+      <text x="315" y="193" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,0.75)">Lead capture · Nurture sequences · Conversion tracking</text>
+      <text x="315" y="210" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,0.55)">Zero paid budget · All organic</text>
+
+      <!-- Arrows from hub bottom-center (315,224) → each segment top-center -->
+      <!-- SME center=78, BizOwner=236, Merch=394, Overseas=552 -->
+      <line x1="248" y1="224" x2="78"  y2="272" stroke="#f2c4bc" stroke-width="1.5" marker-end="url(#arrc2)"/>
+      <line x1="282" y1="224" x2="236" y2="272" stroke="#f2c4bc" stroke-width="1.5" marker-end="url(#arrc2)"/>
+      <line x1="348" y1="224" x2="394" y2="272" stroke="#f2c4bc" stroke-width="1.5" marker-end="url(#arrc2)"/>
+      <line x1="382" y1="224" x2="552" y2="272" stroke="#f2c4bc" stroke-width="1.5" marker-end="url(#arrc2)"/>
+
+      <!-- BOTTOM ROW — audience segments (same x as top boxes) -->
+      <!-- SME -->
+      <rect x="12" y="272" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <text x="78" y="298" text-anchor="middle" font-size="17">🏬</text>
+      <text x="78" y="317" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#1a1a1a">SME</text>
+      <text x="78" y="332" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Small-medium businesses</text>
+
+      <!-- Business Owner -->
+      <rect x="170" y="272" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <text x="236" y="298" text-anchor="middle" font-size="17">💼</text>
+      <text x="236" y="317" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#1a1a1a">Business Owner</text>
+      <text x="236" y="332" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Direct decision makers</text>
+
+      <!-- Merchandiser -->
+      <rect x="328" y="272" width="132" height="72" rx="12" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <text x="394" y="298" text-anchor="middle" font-size="17">🛒</text>
+      <text x="394" y="317" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#1a1a1a">Merchandiser</text>
+      <text x="394" y="332" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Retail &amp; product brands</text>
+
+      <!-- Overseas Client -->
+      <rect x="486" y="272" width="132" height="72" rx="12" fill="#fdf0ee" stroke="#c0392b" stroke-width="1.5"/>
+      <text x="552" y="298" text-anchor="middle" font-size="17">🌏</text>
+      <text x="552" y="317" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#c0392b">Overseas Client</text>
+      <text x="552" y="332" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#888">International &amp; remote</text>
+
+      <!-- ═══════════════════════════════
+           DIVIDER
+      ═══════════════════════════════ -->
+      <line x1="648" y1="20" x2="648" y2="360" stroke="#e4e0d8" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+      <!-- ═══════════════════════════════
+           SIDE SUB-DIAGRAM — Brand Amplification
+           x: 660–890, centered at 775
+      ═══════════════════════════════ -->
+
+      <!-- Label -->
+      <text x="775" y="36" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" letter-spacing="1.2" fill="#aaa">BRAND AMPLIFICATION</text>
+
+      <!-- BEP Content node -->
+      <rect x="690" y="50" width="170" height="52" rx="12" fill="#c0392b"/>
+      <text x="775" y="72" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="white">BEP Content Hub</text>
+      <text x="775" y="88" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">Blog · Tools · Service pages</text>
+
+      <!-- Arrow down -->
+      <line x1="775" y1="102" x2="775" y2="128" stroke="#e4e0d8" stroke-width="1.5" marker-end="url(#arrb)"/>
+
+      <!-- Instagram + Meta row -->
+      <rect x="690" y="132" width="78" height="48" rx="10" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <text x="729" y="153" text-anchor="middle" font-size="14">📸</text>
+      <text x="729" y="170" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" fill="#1a1a1a">Instagram</text>
+
+      <rect x="782" y="132" width="78" height="48" rx="10" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <text x="821" y="153" text-anchor="middle" font-size="14">📘</text>
+      <text x="821" y="170" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" fill="#1a1a1a">Meta / FB</text>
+
+      <!-- Arrow down from both to backlinks -->
+      <line x1="729" y1="180" x2="729" y2="208" stroke="#e4e0d8" stroke-width="1.5" marker-end="url(#arrb)"/>
+      <line x1="821" y1="180" x2="821" y2="208" stroke="#e4e0d8" stroke-width="1.5" marker-end="url(#arrb)"/>
+
+      <!-- Backlinks node -->
+      <rect x="690" y="212" width="170" height="48" rx="10" fill="white" stroke="#f2c4bc" stroke-width="1.5"/>
+      <text x="775" y="233" text-anchor="middle" font-size="13">🔗</text>
+      <text x="775" y="250" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" fill="#1a1a1a">Backlinks &amp; Referral Traffic</text>
+
+      <!-- Arrow down -->
+      <line x1="775" y1="260" x2="775" y2="286" stroke="#e4e0d8" stroke-width="1.5" marker-end="url(#arrb)"/>
+
+      <!-- SEO Authority outcome -->
+      <rect x="690" y="290" width="170" height="48" rx="10" fill="#fdf0ee" stroke="#c0392b" stroke-width="1.5"/>
+      <text x="775" y="311" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#c0392b">📈  SEO Authority</text>
+      <text x="775" y="328" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#888">Domain rank &amp; organic reach</text>
+
+      <!-- +23% CVR badge bottom-left of main -->
+      <rect x="12" y="355" width="100" height="22" rx="11" fill="#c0392b"/>
+      <text x="62" y="370" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" fill="white">+23% Conversion Rate</text>
+
+    </svg>
+
+    <div class="img-caption">Organic growth engine — content strategy driving qualified leads across four customer segments</div>
+  </div>
+
+  <!-- Outcome -->
+
+  <!-- What I Learned -->
+  <div class="learned">
+    <div class="block-label">What I Learned</div>
+    <p style="color:var(--ink-light); line-height:1.8">The thing I'm most proud of isn't the conversion rate — it's that <strong style="color:var(--ink)">we built a lead engine from nothing, without spending a single baht on ads.</strong> Setting up the operations from scratch taught me that the hardest part of 0→1 isn't the strategy — it's building the process discipline to execute it consistently while the company is still figuring itself out.</p>
+  </div>
+
+  <!-- Case nav -->
+  <div class="nav-cs">
+    <span style="visibility:hidden">prev</span>
+    <a href="fastwork.html">Next: Fastwork →</a>
+  </div>
+
+</div>
+
+<footer>© 2026 Purisorn Indradat · Bangkok, Thailand</footer>
+
+</body>
+</html>
