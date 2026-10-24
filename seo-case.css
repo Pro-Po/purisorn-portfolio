@@ -176,6 +176,36 @@ h1 {
 }
 .story-copy strong { color: var(--ink); }
 
+.ownership-band {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.ownership-inner {
+  width: min(calc(100% - 48px), var(--max));
+  margin: 0 auto;
+  padding: 76px 0 80px;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 62px;
+}
+
+.ownership-band .story-label { color: #aaa3ff; }
+.ownership-content h2 {
+  max-width: 760px;
+  margin-bottom: 34px;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(32px, 4.2vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+.ownership-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,0.24); }
+.ownership-item { padding: 22px 22px 0 0; }
+.ownership-item + .ownership-item { padding-left: 22px; border-left: 1px solid rgba(255,255,255,0.16); }
+.ownership-item strong { display: block; margin-bottom: 8px; color: #aaa3ff; font-size: 13px; }
+.ownership-item p { margin: 0; color: rgba(255,255,255,0.68); font-size: 14px; line-height: 1.65; }
+
 .method-list { margin-top: 42px; border-top: 1px solid var(--line); }
 .method {
   display: grid;
@@ -280,6 +310,10 @@ footer { border-top: 1px solid var(--line); padding: 24px; color: var(--muted); 
   .citation:nth-child(odd) { border-left: 0; }
   .citation:nth-child(n+3) { border-top: 1px solid var(--line); }
   .method { grid-template-columns: 1fr; gap: 8px; }
+  .ownership-inner { grid-template-columns: 1fr; gap: 28px; }
+  .ownership-grid { grid-template-columns: 1fr; }
+  .ownership-item { padding: 20px 0; }
+  .ownership-item + .ownership-item { padding-left: 0; border-top: 1px solid rgba(255,255,255,0.16); border-left: 0; }
 }
 
 @media (max-width: 480px) {
@@ -289,6 +323,7 @@ footer { border-top: 1px solid var(--line); padding: 24px; color: var(--muted); 
   .impact-item { min-height: 112px; padding: 20px 14px 20px 0; }
   .impact-item + .impact-item { padding-left: 14px; }
   .section, .learning { padding: 68px 0; }
+  .ownership-inner { width: calc(100% - 40px); padding: 62px 0; }
   .evidence-inner { width: calc(100% - 24px); padding: 68px 0; }
   .metric { min-height: 96px; padding: 18px 16px; }
   .metric strong { font-size: 29px; }
