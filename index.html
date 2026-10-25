@@ -146,7 +146,10 @@
       display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
       padding: 4px 2px 0; margin-top: 22px;
     }
-    .case-track:first-child { margin-top: 0; }
+    .group-product { order: 1; }
+    .group-seo { order: 2; }
+    .group-performance { order: 3; }
+    .case-track.group-product { margin-top: 0; }
     .case-track h3 { font-family: 'DM Serif Display', serif; font-size: 23px; font-weight: 400; line-height: 1.2; }
     .case-track p { color: var(--ink-light); font-size: 12px; }
 
@@ -457,13 +460,13 @@
 
     <div class="cases">
 
-      <div class="case-track">
+      <div class="case-track group-performance">
         <h3>Performance Marketing</h3>
         <p>Paid acquisition connected to commercial outcomes</p>
       </div>
 
       <!-- FASTWORK PERFORMANCE MARKETING -->
-      <div class="case-card" id="cc0">
+      <div class="case-card group-performance" id="cc0">
         <div class="case-head" onclick="toggleCase('cc0')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -506,7 +509,7 @@
       </div>
 
       <!-- FRANK PERFORMANCE MARKETING -->
-      <div class="case-card" id="cc5">
+      <div class="case-card group-performance" id="cc5">
         <div class="case-head" onclick="toggleCase('cc5')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -548,13 +551,13 @@
         </div>
       </div>
 
-      <div class="case-track">
-        <h3>SEO / AEO Growth</h3>
+      <div class="case-track group-seo">
+        <h3>SEO / AEO</h3>
         <p>Search systems built for durable discovery</p>
       </div>
 
       <!-- FASTWORK INDONESIA SEO -->
-      <div class="case-card" id="cc6">
+      <div class="case-card group-seo" id="cc6">
         <div class="case-head" onclick="toggleCase('cc6')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -580,7 +583,7 @@
       </div>
 
       <!-- 35YONTRAKAN SEO / AEO -->
-      <div class="case-card" id="cc7">
+      <div class="case-card group-seo" id="cc7">
         <div class="case-head" onclick="toggleCase('cc7')">
           <div class="case-head-left"><div class="case-chips"><span class="chip chip-search">SEO Growth</span><span class="chip chip-search">AEO</span><span class="chip chip-search">Content Strategy</span></div><div class="case-title">Turning Product Expertise into Search Authority</div><div class="case-company">35Yontrakan · Turning online visibility into offline purchases</div></div><div class="case-toggle">+</div>
         </div>
@@ -588,24 +591,67 @@
       </div>
 
       <!-- WAWAPACK SEO -->
-      <div class="case-card" id="cc8">
+      <div class="case-card group-seo" id="cc8">
         <div class="case-head" onclick="toggleCase('cc8')"><div class="case-head-left"><div class="case-chips"><span class="chip chip-search">SEO Growth</span><span class="chip chip-search">Technical SEO</span><span class="chip chip-search">E-commerce</span></div><div class="case-title">Engineering Organic Growth from the First URL</div><div class="case-company">Wawapack · Helping a startup grow online visibility through SEO</div></div><div class="case-toggle">+</div></div>
         <div class="case-body"><hr class="case-divider"><div class="case-meta-grid"><div><div class="case-meta-label">Context</div><div class="case-meta-text">A packaging startup entered a crowded, price-sensitive market with many product types and competitors already using paid acquisition.</div></div><div><div class="case-meta-label">My Role</div><div class="case-meta-text">Helped build the site and owned its SEO architecture, developer requirements, technical implementation, keyword mapping, and content operation.</div></div></div><div class="case-did"><div class="case-did-label">What I Did</div><ul><li>Specified CMS controls so SEO changes no longer depended on developers</li><li>Built the taxonomy, sitemap, URLs, schema, and on-page system</li><li>Mapped Thai keywords to product and category pages</li><li>Wrote content directly and managed additional writers</li></ul></div><div class="case-outcome violet"><div class="case-outcome-label">Outcome</div><div class="case-outcome-text">Organic traffic grew from roughly 3K to nearly 9K monthly visits, with multiple #1 product and category rankings and strong lead generation.</div></div><a href="wawapack-seo.html" class="case-cta">Read SEO / AEO Case →</a></div>
       </div>
 
       <!-- THUMBINTHAI SEO / AEO -->
-      <div class="case-card" id="cc9">
+      <div class="case-card group-seo" id="cc9">
         <div class="case-head" onclick="toggleCase('cc9')"><div class="case-head-left"><div class="case-chips"><span class="chip chip-search">SEO Growth</span><span class="chip chip-search">AEO</span><span class="chip chip-search">B2B</span></div><div class="case-title">Making Manufacturing Expertise Discoverable</div><div class="case-company">Thumbinthai · Repositioning from apparel manufacturing to a T-shirt specialist</div></div><div class="case-toggle">+</div></div>
         <div class="case-body"><hr class="case-divider"><div class="case-meta-grid"><div><div class="case-meta-label">Context</div><div class="case-meta-text">A Bangkok apparel manufacturer needed to translate complex production expertise into clear search journeys for local and international buyers.</div></div><div><div class="case-meta-label">My Role</div><div class="case-meta-text">Built the Webflow site and owned its expansion from one page to a 100-page, multi-market SEO and AEO ecosystem.</div></div></div><div class="case-did"><div class="case-did-label">What I Did</div><ul><li>Built the information architecture, landing pages, and conversion paths</li><li>Separated Thai and international search strategies across sites</li><li>Targeted layered OEM queries and optimized image search</li><li>Shifted AEO content toward real cases, brand solutions, and credible points of view</li></ul></div><div class="case-outcome violet"><div class="case-outcome-label">Outcome</div><div class="case-outcome-text">68.5K clicks · 3.34M impressions · average position 8.7 · 322 AI citations.</div></div><a href="thumbinthai-seo.html" class="case-cta">Read SEO / AEO Case →</a></div>
       </div>
 
-      <div class="case-track">
+      <div class="case-track group-product">
         <h3>Product, Growth &amp; GTM</h3>
-        <p>Broader company and product initiatives</p>
+        <p>Products, brands, and markets built from zero to traction</p>
+      </div>
+
+      <!-- BAKON BY ALFREDO -->
+      <div class="case-card group-product" id="cc10">
+        <div class="case-head" onclick="toggleCase('cc10')">
+          <div class="case-head-left">
+            <div class="case-chips">
+              <span class="chip chip-coral">0→1 Brand</span>
+              <span class="chip chip-coral">Content Strategy</span>
+              <span class="chip chip-coral">Social Growth</span>
+            </div>
+            <div class="case-title">Building an FMCG Brand from Shelf Launch to Daily Demand</div>
+            <div class="case-company">Bakon by Alfredo · Content, social media &amp; KOL growth</div>
+          </div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-body">
+          <hr class="case-divider">
+          <div class="case-meta-grid">
+            <div>
+              <div class="case-meta-label">Context</div>
+              <div class="case-meta-text">A new FMCG brand entered 7-Eleven Thailand and needed a recognizable presence beyond the shelf to build awareness, consideration, and purchase.</div>
+            </div>
+            <div>
+              <div class="case-meta-label">My Role</div>
+              <div class="case-meta-text">Worked with one partner as the brand's lean content and growth team—covering creative production, channel management, paid social, and KOL activation.</div>
+            </div>
+          </div>
+          <div class="case-did">
+            <div class="case-did-label">What I Did</div>
+            <ul>
+              <li>Built an always-on content system using still images and short-form video</li>
+              <li>Managed brand activity and paid distribution across Meta and TikTok</li>
+              <li>Coordinated KOL content to expand awareness and social proof</li>
+              <li>Used audience response, media signals, and client feedback to guide each content cycle</li>
+            </ul>
+          </div>
+          <div class="case-outcome coral">
+            <div class="case-outcome-label">Client-reported outcome</div>
+            <div class="case-outcome-text">Daily sales grew from approximately 100 to more than 5,000 units across several products as retail availability, content, media, and creator activity scaled together.</div>
+          </div>
+          <a href="bakon-brand-growth.html" class="case-cta">Read Case Study →</a>
+        </div>
       </div>
 
       <!-- BEP -->
-      <div class="case-card" id="cc1">
+      <div class="case-card group-product" id="cc1">
         <div class="case-head" onclick="toggleCase('cc1')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -650,7 +696,7 @@
       </div>
 
       <!-- FASTWORK -->
-      <div class="case-card" id="cc2">
+      <div class="case-card group-product" id="cc2">
         <div class="case-head" onclick="toggleCase('cc2')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -694,7 +740,7 @@
       </div>
 
       <!-- G-ABLE -->
-      <div class="case-card" id="cc3">
+      <div class="case-card group-product" id="cc3">
         <div class="case-head" onclick="toggleCase('cc3')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -734,7 +780,7 @@
       </div>
 
       <!-- AI PROJECTS -->
-      <div class="case-card" id="cc4">
+      <div class="case-card group-product" id="cc4">
         <div class="case-head" onclick="toggleCase('cc4')">
           <div class="case-head-left">
             <div class="case-chips">
@@ -854,6 +900,11 @@
 <footer>© 2026 Purisorn Indradat · Bangkok, Thailand</footer>
 
 <script>
+  const caseContainer = document.querySelector('.cases');
+  ['group-product', 'group-seo', 'group-performance'].forEach(group => {
+    caseContainer.querySelectorAll(`.${group}`).forEach(item => caseContainer.appendChild(item));
+  });
+
   function toggleCase(id) {
     document.getElementById(id).classList.toggle('open');
   }
