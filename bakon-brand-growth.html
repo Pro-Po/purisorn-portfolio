@@ -167,37 +167,18 @@
     .proof-head h2 { margin-bottom: 0; }
     .proof-head p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
 
-    .content-wall {
-      display: grid;
-      grid-template-columns: 1.05fr .75fr .75fr;
-      grid-template-rows: 240px 240px;
-      gap: 14px;
-    }
-
-    .content-tile { position: relative; overflow: hidden; border: 1px solid rgba(32,32,29,.15); border-radius: 16px; padding: 24px; }
-    .content-tile strong { display: block; max-width: 250px; font-family: "DM Serif Display", serif; font-size: 28px; font-weight: 400; line-height: 1.08; }
-    .content-tile span { position: absolute; left: 24px; bottom: 20px; font-size: 12px; font-weight: 700; }
-    .content-tile::after { content: ""; position: absolute; width: 150px; height: 150px; border: 26px solid currentColor; border-radius: 50%; right: -58px; bottom: -62px; opacity: .12; }
-    .tile-still { grid-row: 1 / span 2; background: var(--cheese); color: var(--tomato-dark); }
-    .tile-still strong { font-size: clamp(35px, 5vw, 58px); }
-    .tile-video { background: var(--tomato); color: var(--white); }
-    .tile-social { background: var(--green); color: var(--white); }
-    .tile-kol { grid-column: 2 / span 2; background: var(--pink); color: var(--ink); }
-    .play { width: 54px; height: 54px; margin-top: 28px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; font-size: 19px; }
-
-    .asset-callout {
-      width: min(100%, var(--max));
-      margin: 20px auto 0;
-      padding: 18px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      border: 1px dashed #b9ad97;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .asset-callout strong { color: var(--ink); }
+    .kol-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .kol-case { overflow: hidden; border-top: 1px solid var(--ink); background: var(--white); }
+    .kol-media { aspect-ratio: 1600 / 1083; overflow: hidden; background: #141414; border-bottom: 1px solid var(--line); }
+    .kol-media img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .kol-copy { padding: 25px 26px 27px; }
+    .kol-type { margin-bottom: 10px; color: var(--tomato); font-size: 12px; font-weight: 700; }
+    .kol-copy h3 { margin-bottom: 10px; font-family: "DM Serif Display", serif; font-size: clamp(25px, 3vw, 34px); font-weight: 400; line-height: 1.08; }
+    .kol-copy > p:not(.kol-type) { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .kol-result { margin-top: 22px; padding-top: 18px; display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: end; border-top: 1px solid var(--line); }
+    .kol-result strong { color: var(--tomato); font-family: "DM Serif Display", serif; font-size: 35px; font-weight: 400; line-height: .9; }
+    .kol-result span { color: var(--ink); font-size: 13px; font-weight: 600; line-height: 1.35; }
+    .kol-proof { grid-column: 1 / -1; margin-top: 10px; color: var(--muted); font-size: 11px; line-height: 1.5; }
 
     .result {
       width: min(calc(100% - 48px), var(--max));
@@ -219,9 +200,7 @@
       .ownership-item { padding: 20px 0; }
       .ownership-item + .ownership-item { padding-left: 0; border-top: 1px solid rgba(255,255,255,.22); border-left: 0; }
       .proof-head { grid-template-columns: 1fr; gap: 18px; }
-      .content-wall { grid-template-columns: 1fr 1fr; grid-template-rows: 300px 220px 220px; }
-      .tile-still { grid-column: 1 / span 2; grid-row: auto; }
-      .tile-kol { grid-column: 1 / span 2; }
+      .kol-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 560px) {
@@ -234,10 +213,8 @@
       .ownership-inner { padding: 62px 0; }
       .workstream { grid-template-columns: 1fr; gap: 8px; }
       .proof-inner { width: calc(100% - 24px); padding: 68px 0; }
-      .content-wall { display: flex; flex-direction: column; }
-      .content-tile { min-height: 220px; }
-      .content-tile.tile-still { min-height: 320px; }
-      .asset-callout { align-items: flex-start; flex-direction: column; }
+      .kol-copy { padding: 22px 20px 24px; }
+      .kol-result strong { font-size: 31px; }
     }
 
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -317,21 +294,34 @@
       </div>
     </section>
 
-    <section class="proof" aria-labelledby="proof-title">
+    <section class="proof" id="kol-proof" aria-labelledby="proof-title">
       <div class="proof-inner">
         <div class="proof-head">
-          <h2 id="proof-title">A lean channel system connected attention to retail demand.</h2>
-          <p>This visual maps the operating system across content, paid social, and KOL activation.</p>
+          <h2 id="proof-title">Creator activations made product discovery visible—and measurable.</h2>
+          <p>Two KOL executions show how different creative formats generated organic interaction and efficient launch reach.</p>
         </div>
 
-        <div class="content-wall" aria-label="Bakon content and distribution system">
-          <article class="content-tile tile-still"><strong>Product storytelling in the feed</strong><span>STILL IMAGE SERIES</span></article>
-          <article class="content-tile tile-video"><strong>Short clips built for discovery</strong><div class="play">▶</div><span>META + TIKTOK</span></article>
-          <article class="content-tile tile-social"><strong>Always-on brand management</strong><span>CHANNEL VIEW</span></article>
-          <article class="content-tile tile-kol"><strong>Creator voices turning awareness into social proof</strong><span>KOL ACTIVATION</span></article>
-        </div>
+        <div class="kol-grid" aria-label="Bakon KOL campaign evidence">
+          <article class="kol-case">
+            <div class="kol-media"><img src="images/bakon-kol-mystery-box-jayallday.png" alt="TikTok Mystery Box activation by เจออเดย์ showing Bakon branded packaging and public engagement results."></div>
+            <div class="kol-copy">
+              <p class="kol-type">Mystery Box activation</p>
+              <h3>เจออเดย์</h3>
+              <p>A curiosity-led reveal gave the product a native TikTok moment designed to earn attention, reactions, and saves without paid amplification.</p>
+              <div class="kol-result"><strong>10K+</strong><span>organic engagements</span><small class="kol-proof">Public post: 10.5K likes · 27 comments · 588 saves</small></div>
+            </div>
+          </article>
 
-        <div class="asset-callout"><span><strong>KOL evidence to add:</strong> campaign imagery and creator content.</span></div>
+          <article class="kol-case">
+            <div class="kol-media"><img src="images/bakon-kol-product-launch-kikiloves-eat.png" alt="TikTok product launch content by Kikiloves eat featuring Bakon pizza and public engagement results."></div>
+            <div class="kol-copy">
+              <p class="kol-type">Product launch KOL</p>
+              <h3>Kikiloves eat</h3>
+              <p>A creator-led product demonstration connected the launch to a real eating moment and made the 7-Eleven purchase path immediately clear.</p>
+              <div class="kol-result"><strong>Low CPM</strong><span>with strong reach and engagement</span><small class="kol-proof">Public post: 1,915 likes · 24 comments · 109 saves</small></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
