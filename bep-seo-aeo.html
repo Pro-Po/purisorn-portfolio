@@ -18,7 +18,9 @@
     .rank-head { max-width: 760px; margin-bottom: 35px; }
     .rank-head h2 { margin-bottom: 14px; font-family: "DM Serif Display", serif; font-size: clamp(32px, 4.2vw, 48px); font-weight: 400; line-height: 1.08; }
     .rank-head p { max-width: 680px; color: var(--muted); font-size: 16px; }
+    .rank-group-label { margin: 30px 0 12px; color: var(--muted); font-size: 12px; font-weight: 600; }
     .rank-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+    .rank-grid-secondary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .rank-card { min-height: 260px; padding: 27px 25px 25px 0; display: flex; flex-direction: column; color: inherit; text-decoration: none; }
     .rank-card + .rank-card { padding-left: 25px; border-left: 1px solid var(--line); }
     .rank-card:hover .rank-keyword, .rank-card:focus-visible .rank-keyword { color: var(--search); }
@@ -35,6 +37,9 @@
     .signal-link small { display: block; margin-bottom: 4px; color: var(--muted); }
     .signal-link strong { font-size: 15px; }
     .signal-link span { color: var(--search); font-size: 20px; }
+
+    .method-tags { margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+    .method-tags li { padding: 7px 10px; border: 1px solid var(--line); color: var(--ink); font-size: 12px; font-weight: 600; line-height: 1; }
 
     @media (max-width: 760px) {
       .rank-grid { grid-template-columns: 1fr; }
@@ -70,7 +75,7 @@
         <div class="impact-item"><div class="impact-value">33.3K</div><p class="impact-label">Google Search clicks</p></div>
         <div class="impact-item"><div class="impact-value">4.86M</div><p class="impact-label">Search impressions</p></div>
         <div class="impact-item"><div class="impact-value">200+</div><p class="impact-label">Pages in the content ecosystem</p></div>
-        <div class="impact-item"><div class="impact-value">Top 2</div><p class="impact-label">Across three priority queries</p></div>
+        <div class="impact-item"><div class="impact-value">Top 2</div><p class="impact-label">Across five priority queries</p></div>
       </div>
     </header>
 
@@ -90,12 +95,10 @@
     </div></div></section>
 
     <section class="section"><div class="story-row"><p class="story-label">Strategy</p><div class="story-copy">
-      <h2>Own the complete search journey—not one keyword.</h2>
+      <h2>Build topic depth. Earn external citations.</h2>
       <div class="method-list">
-        <div class="method"><div class="method-name">Learn</div><div><h3>Answer specialist questions clearly</h3><p>Built a glossary layer for concepts such as Domain Authority, giving search engines and answer engines concise, structured explanations.</p></div></div>
-        <div class="method"><div class="method-name">Evaluate</div><div><h3>Capture commercial research before the shortlist</h3><p>Created practical articles around budget and decision questions, including how much a business website costs.</p></div></div>
-        <div class="method"><div class="method-name">Buy</div><div><h3>Align service pages with high-intent demand</h3><p>Expanded focused service pages around branding, website, marketing, and production needs so discovery could lead directly to consultation.</p></div></div>
-        <div class="method"><div class="method-name">Authority</div><div><h3>Support owned content with external signals</h3><p>Connected PR coverage with a growing internal content network to reinforce expertise and brand discovery.</p></div></div>
+        <div class="method"><div class="method-name">Topic cluster</div><div><h3>Build content layers around the same customer problem</h3><p>Organized each topic across complementary formats so search and answer engines could see depth—and customers could move from learning to decision.</p><ul class="method-tags"><li>Glossary</li><li>Calculator</li><li>FAQ</li><li>Know-how</li><li>Price content</li></ul></div></div>
+        <div class="method"><div class="method-name">Get cited</div><div><h3>Make the brand discoverable beyond its own domain</h3><p>Built external brand signals through relevant social content, community participation, business profiles, and earned mentions so BEP could be referenced as a credible source.</p><ul class="method-tags"><li>Social media</li><li>Communities</li><li>Brand profiles</li><li>PR &amp; mentions</li></ul></div></div>
       </div>
     </div></div></section>
 
@@ -119,6 +122,11 @@
         <a class="rank-card" href="https://www.bepgroup.space/glossary/domain-authority" target="_blank" rel="noopener noreferrer"><p class="rank-stage">Learn · Glossary</p><div class="rank-number">#1</div><div class="rank-keyword">“Domain Authority คืออะไร”</div><p class="rank-type">SEO / AEO visibility</p></a>
         <a class="rank-card" href="https://www.bepgroup.space/blog/how-much-does-a-website-cost" target="_blank" rel="noopener noreferrer"><p class="rank-stage">Evaluate · Blog</p><div class="rank-number">#1</div><div class="rank-keyword">“เว็บไซต์ราคาเท่าไร”</div><p class="rank-type">SEO / AEO visibility</p></a>
         <a class="rank-card" href="https://www.bepgroup.space/branding-and-logo-design" target="_blank" rel="noopener noreferrer"><p class="rank-stage">Buy · Service page</p><div class="rank-number">#2</div><div class="rank-keyword">“รับออกแบบ Branding”</div><p class="rank-type">High-intent service discovery</p></a>
+      </div>
+      <p class="rank-group-label">Additional commercial rankings · Google Thailand snapshot · 11 November 2026</p>
+      <div class="rank-grid rank-grid-secondary">
+        <a class="rank-card" href="https://www.bepgroup.space/webflow-service" target="_blank" rel="noopener noreferrer"><p class="rank-stage">Buy · Service page</p><div class="rank-number">#2</div><div class="rank-keyword">“รับทำเว็บไซต์ Webflow”</div><p class="rank-type">High-intent website service query</p></a>
+        <a class="rank-card" href="https://www.bepgroup.space/ci-service" target="_blank" rel="noopener noreferrer"><p class="rank-stage">Buy · Service page</p><div class="rank-number">#2</div><div class="rank-keyword">“รับออกแบบ CI”</div><p class="rank-type">High-intent branding service query</p></a>
       </div>
       <div class="signal-grid" aria-label="Authority evidence">
         <a class="signal-link" href="https://www.khaosod.co.th/pr-news/news_7150739" target="_blank" rel="noopener noreferrer"><div><small>Earned authority</small><strong>PR coverage on Khaosod</strong></div><span>↗</span></a>
